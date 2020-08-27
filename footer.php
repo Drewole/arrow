@@ -4,7 +4,7 @@
 
 			<?php if (is_page(array(50, 125))): //This displays the bottom contact form on all pages but the home page and contact ?>
 
-				<?php else: ?>
+							<?php else: ?>
 				<?php get_template_part('/library/content-modules/forms/large-footer-contact/fw', 'large-footer-contact');?>
 			<?php endif;?>
 
@@ -24,10 +24,10 @@ $the_query = new WP_Query($footer_products_args);
 
 while ($the_query->have_posts()): $the_query->the_post();?>
 
-							                    <li><a href="<?php the_permalink();?>"><?php the_title();?></a></li>
+										                    <li><a href="<?php the_permalink();?>"><?php the_title();?></a></li>
 
 
-							        <?php endwhile;
+										        <?php endwhile;
 wp_reset_postdata();?>
 							</ul>
 
@@ -217,7 +217,7 @@ wp_reset_postdata();?>
                 map: map,
                 icon: {
                     size: new google.maps.Size(50,61),
-                    url: 'https://res.cloudinary.com/drewole/image/upload/v1588787009/arrowloc_btztaw.svg'
+                    url: 'https: //res.cloudinary.com/drewolsen/image/upload/v1598501564/arrowloc_y3tci8.svg'
                 }
             });
         }
