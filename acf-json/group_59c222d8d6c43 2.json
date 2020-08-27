@@ -1,0 +1,97 @@
+{
+    "key": "group_59c222d8d6c43",
+    "title": "Front Page Services Three Points",
+    "fields": [
+        {
+            "key": "field_59c222f70c2ae",
+            "label": "Services Three Points",
+            "name": "services_three_points_fp",
+            "type": "textarea",
+            "instructions": "Keep it short and sweet.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Stormwater Treatment\r\nComprehensive On Site Water Treatment\r\nSolids Control",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_59c3aface773a",
+            "label": "Service Impact Statment",
+            "name": "services_impact_statment_fp",
+            "type": "text",
+            "instructions": "Impact statement for the services section on the front page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "23"
+            }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "27"
+            }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "21"
+            }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "19"
+            }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "17"
+            }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "25"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "These fields are displayed on the front page in the services overlay.",
+    "modified": 1586159143
+}

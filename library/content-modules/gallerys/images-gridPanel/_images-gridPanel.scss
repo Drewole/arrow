@@ -1,0 +1,72 @@
+.grid-panel-container {
+	position: relative;
+	border-top: 4px solid gray;
+	border-bottom: 4px solid gray;
+	overflow: hidden;
+	display: grid;
+	grid-gap: 2px;
+	background: white;
+	grid-template-columns: repeat(8, 1fr);
+
+	h2 {
+		display: block;
+		font-family: $sans-serif;
+		border-radius: 3px;
+		font-weight: bolder;
+		text-transform: uppercase;
+		position: absolute;
+		z-index: 10;
+		background: rgba(255, 255, 255, .7);
+		padding: 15px 30px;
+		width: 90%;
+		text-align: center;
+		top: 30%;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		transform: translateX(-50%);
+		&:after {
+			content: '';
+			height: 5px;
+			background: rgba(255, 255, 255, .7);
+			position: absolute;
+			z-index: -1;
+			top: 49%;
+			width: 120%;
+			left: 50%;
+			-webkit-transform: translateX(-50%);
+			transform: translateX(-50%);
+		}
+	}
+
+	& > div {
+		height: 30px;
+		background-color: #333;
+		background-size: cover;
+		background-attachment: fixed;
+		@include for-size(tablet-portrait-up) {
+			height: 60px;
+		}
+		@include for-size(tablet-landscape-up) {
+			height: 80px;
+		}
+		@include for-size(desktop-up) {
+			height: 120px;
+		}
+		&:hover {
+			transform: scale(1.12);
+			@include transition(all .15s ease-in-out);
+		}
+	}
+
+	& > div:nth-of-type(10) {
+		grid-column: 10 / 12;
+	}
+	.grid-1 {
+		background-image: url(#{$images}/gridBkg2.jpg);
+		background-repeat: no-repeat;
+	}
+	.grid-2 {
+		background-image: url(#{$images}/gridBkg1.jpg);
+		background-repeat: no-repeat;
+	}
+}

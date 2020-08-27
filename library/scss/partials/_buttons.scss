@@ -1,0 +1,87 @@
+/******************************************************************
+Stylesheet: Button Styles
+
+Buttons are a pretty important part of your site's style, so it's
+important to have a consistent baseline for them. Use this stylesheet
+to create all kinds of buttons.
+
+Helpful Links:
+http://blog.teamtreehouse.com/create-a-themable-button-set-with-sass
+https://codepen.io/Treehouse/pen/vEkit
+
+******************************************************************/
+
+/***************************************************
+￼USAGE: class of color and class of btn
+Example: <a class="orange btn">This is my button!</a>
+****************************************************/
+
+/* Color Themes - Variables */
+
+//Add color themes as necessary - primary color should be the link color using $link-color
+$pink: #be378c;
+//$blue: #3BA9E4;
+
+/* Common Colors - Variables */
+
+$off-wht: rgba(white, .4);
+
+/* Mixins */
+
+@mixin btn-theme($btn-color) {
+	border-color: darken($btn-color, 3%);
+	background-color: $btn-color;
+	@include css-gradient(darken($btn-color,2%),darken($btn-color, 5%));
+	@include transition(all 0.2s ease-in-out);
+	&:hover {
+		background-color: darken($btn-color, 6%);
+		@include css-gradient(darken($btn-color,5%),darken($btn-color,2%));
+		color: $white;
+	}
+	&:active {
+		box-shadow: 0 .063em $off-wht, inset 0 0 1.094em darken($btn-color, 40%), inset 0 .063em darken($btn-color, 20%),
+			inset 0 -0.188em darken($btn-color, 20%);
+	}
+}
+
+@mixin trans($val...) {
+	-webkit-transition: $val;
+	-moz-transition: $val;
+	-o-transition: $val;
+	transition: $val;
+}
+
+/* Button Global */
+
+.btn {
+	display: inline-block;
+	margin: 1rem;
+	padding: .938em 1.875em;
+	border: .065em solid;
+	border-radius: .425em;
+	box-shadow: 0 .45em .45em -.2em rgba(darken($primaryColor, 12%), .8);
+	color: $white;
+	font: bold 1rem $sans-serif;
+	@include trans(0.2s ease-in-out);
+	text: {
+		transform: uppercase;
+		decoration: none;
+		shadow: 0 .063em rgba(black, .3);
+	}
+	cursor: pointer;
+
+	&:visited,
+	&:hover {
+		color: $white;
+	}
+}
+
+/* Themes */
+
+.green {
+	@include btn-theme($link-color);
+}
+.darkgreen {
+	@include btn-theme($primaryColor);
+}
+//and so on and so forth

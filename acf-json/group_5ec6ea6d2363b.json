@@ -1,0 +1,174 @@
+{
+    "key": "group_5ec6ea6d2363b",
+    "title": "Video Background CTA",
+    "fields": [
+        {
+            "key": "field_5ec6ea8d758d0",
+            "label": "Add a Video Background Call to action?",
+            "name": "vid_bkg_add",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5ec6f199758d2",
+            "label": "Video",
+            "name": "vid_bkg_video",
+            "type": "file",
+            "instructions": "Upload your video. Smaller the better, remember the user has to load this.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ec6ea8d758d0",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": 20,
+            "mime_types": ".mp4"
+        },
+        {
+            "key": "field_5ec6eabe758d1",
+            "label": "Title",
+            "name": "vid_bkg_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ec6ea8d758d0",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ec6f1ff758d3",
+            "label": "Text",
+            "name": "vid_bkg_txt",
+            "type": "textarea",
+            "instructions": "Short and sweet.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ec6ea8d758d0",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5ec6f27b758d4",
+            "label": "Button text",
+            "name": "vid_bkg_btntxt",
+            "type": "text",
+            "instructions": "This is the text that appears on the button.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ec6ea8d758d0",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ec6f2ae758d5",
+            "label": "Button destination",
+            "name": "vid_bkg_btnurl",
+            "type": "link",
+            "instructions": "Where should the user go when they click this button?",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ec6ea8d758d0",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1590165783
+}

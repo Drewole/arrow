@@ -1,0 +1,120 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Login Stylesheet
+
+This stylesheet is loaded (if admin.php is setup in your
+functions file) on the login page. This way you can style
+the login page. It won't affect any other page, admin or front-end.
+
+For more info, check out the codex:
+http://codex.wordpress.org/Creating_Admin_Themes
+
+******************************************************************/
+// Sass variables
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/typography";
+
+body.login {
+	font-family: $sans-serif;
+}
+
+#login {
+} /* the form box */
+
+/*
+This is the Wordpress logo in the admin area.
+You'll have to load your own images and mess
+with the width and height.
+*/
+body.login {
+	background-color: $secondaryColor;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 100 100'%3E%3Crect x='0' y='0' width='96' height='96' fill-opacity='0.7' fill='%23ed4257'/%3E%3C/svg%3E");
+}
+.login h1 a {
+	background: url(../images/svg/arrowLogoWhite.svg) no-repeat top center; /* make sure to replace this! */
+	filter: drop-shadow(0 2px 2px rgba(darken($primaryColor, 20%), .8));
+	background-size: 320px 82px;
+	width: 320px;
+	height: 82px;
+	text-indent: -9999px;
+	overflow: hidden;
+	padding-bottom: 15px;
+	display: block;
+}
+
+.login #backtoblog a,
+.login #nav a {
+	color: $white;
+	font-weight: 600;
+	&:hover {
+		color: $secondaryColor;
+	}
+}
+
+.login #wp-auth-check-wrap #wp-auth-check {
+	background-color: $primaryColor;
+	border-radius: 4px;
+}
+
+.login #login_error,
+.login .message {
+	border-left: 4px solid $secondaryColor;
+}
+
+.login form .input {
+	box-shadow: none;
+	border: none;
+	border-bottom: 1px solid rgba($black, .2);
+}
+
+.login #loginform {
+	margin-left: 1px;
+	padding: 26px 24px 46px;
+	border-radius: 3px;
+	box-shadow: 0 13px 6px -6px rgba($black, .1);
+}
+
+body.login #wp-submit {
+	background-color: $link-color;
+	@include css-gradient(darken($link-color,2%),darken($link-color, 5%));
+	@include transition(all 0.2s ease-in-out);
+	display: inline-block;
+	margin: 1rem;
+	border: none;
+	border-radius: 4px;
+	box-shadow: 0 4px 4px -.2em rgba(black, .7);
+	color: darken($link-color, 25%);
+	font-weight: 600;
+	line-height: 0;
+	padding: 1.4em 1.9em;
+	text-shadow: 0 1px 1px white(.4);
+	text: {
+		transform: uppercase;
+		decoration: none;
+	}
+	cursor: pointer;
+
+	&:visited {
+		color: $white;
+	}
+	&:hover {
+		background-color: darken($link-color, 6%);
+		@include css-gradient(darken($link-color,5%),darken($link-color,2%));
+		color: $white;
+		text-shadow: 0 1px 1px black(.2);
+	}
+	&:active {
+		box-shadow: 0 .063em darken($white, 5%), inset 0 0 1.094em darken($link-color, 40%),
+			inset 0 .063em darken($link-color, 20%), inset 0 -0.188em darken($link-color, 20%);
+	}
+}
+
+/*
+You'll have to override some of the default styles
+but since we're referencing the id, it should be easy.
+*/
+#wp-submit {
+} /* login button*/

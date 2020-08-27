@@ -1,0 +1,60 @@
+/******************************************************************
+Site Name:Proact USA
+Author:Drew Olsen
+
+Stylesheet: Main Stylesheet
+******************************************************************/
+//This sheet imports everything from the build.
+
+//////////////// IMPORTING PARTIALS
+/*
+These files are needed at the beginning so that we establish all
+our mixins, functions, and variables that we'll be using across
+the whole project.
+*/
+
+// normalize: http://necolas.github.io/normalize.css/
+@import "partials/normalize";
+
+// Sass variables
+@import "partials/variables";
+
+// Sass functions
+@import "partials/functions";
+
+// import mixins
+@import "partials/mixins";
+
+// the grid
+@import "partials/simple-grid";
+
+// typography
+@import "partials/typography";
+
+
+//////////////// IMPORTING MODULES
+
+// alert boxes
+@import "partials/alerts";
+
+// buttons
+@import "partials/buttons";
+
+// forms (inputs & labels)
+@import "partials/forms";
+
+//content modules
+@import "../content-modules/modules";
+
+//////////////// Site Specific Styles
+
+@import "main/site-styles";
+
+//////////////// PRINT STYLESHEET
+
+@media print {
+
+	// styles in print.scss
+	@import "partials/print";
+
+}

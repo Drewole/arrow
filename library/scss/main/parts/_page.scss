@@ -1,0 +1,38 @@
+//////////////// All general styling of the website pages
+.parent-pageid-7 {
+	.hero {
+		border-bottom: none;
+	}
+}
+
+.page-title {
+	background: $gray;
+	padding: 22px 0;
+
+	h1 {
+		@include font-size(24px);
+		color: darken($secondaryColor, 22%);
+		color: white;
+		padding: 0 5%;
+	}
+}
+
+.no-hero {
+	margin-top: 200px;
+}
+
+section.3col-hover {
+	h3 {
+		color: $white;
+		display: block;
+		font-weight: 400;
+		font-family: $serif;
+		@include font-size(32px);
+		text-align: center;
+		background-color: $gray;
+		margin: 0;
+		padding: 20px 4%;
+	}
+}
+
+//////////////// Table styling

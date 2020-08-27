@@ -1,0 +1,64 @@
+{
+    "key": "group_59c95b41e6bf3",
+    "title": "Dynamic Sidebars",
+    "fields": [
+        {
+            "key": "field_59c95b84c76fb",
+            "label": "Sidebars",
+            "name": "ds_sidebars",
+            "type": "repeater",
+            "instructions": "Add sidebars as necessary. They can be assigned to a specific page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add a Sidebar",
+            "sub_fields": [
+                {
+                    "key": "field_59c95bcfc76fc",
+                    "label": "Sidebar Name",
+                    "name": "ds_sidebar_name",
+                    "type": "text",
+                    "instructions": "Give your sidebar a name you will remember.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1586159143
+}

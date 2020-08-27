@@ -1,0 +1,191 @@
+{
+    "key": "group_59bc289c8da87",
+    "title": "Page Large Hero",
+    "fields": [
+        {
+            "key": "field_5a037a56df67d",
+            "label": "Add a Hero Image",
+            "name": "add_hero_fphero",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Toggle the hero image for this page.",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_59bc57b31e4d9",
+            "label": "Large Hero Image",
+            "name": "hero_image_fphero",
+            "type": "image",
+            "instructions": "This is your hero image. Image size does matter here. Minimum of 1950px wide and 960px tall, and ensure that it is a JPEG and not a PNG. Be mindful of the images DPI. 72 is the highest needed. (You won't be able to upload the image if it doesn't meet these criteria).",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a037a56df67d",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "full-width-800",
+            "library": "all",
+            "min_width": "1500px",
+            "min_height": "950px",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "1.2",
+            "mime_types": ".jpg,.jpeg"
+        },
+        {
+            "key": "field_59db7561d8bdf",
+            "label": "Additional Options",
+            "name": "additional_options_fphero",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a037a56df67d",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "show": "Show",
+                "hide": "Hide"
+            },
+            "allow_null": 1,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "hide",
+            "layout": "vertical",
+            "return_format": "value"
+        },
+        {
+            "key": "field_59bc28aed2303",
+            "label": "Title",
+            "name": "primary_title_fphero",
+            "type": "text",
+            "instructions": "Large title in the hero image. Keep it short.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59db7561d8bdf",
+                        "operator": "==",
+                        "value": "show"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59bc2930d2305",
+            "label": "Button Text",
+            "name": "primary_btntxt_fphero",
+            "type": "text",
+            "instructions": "Text that shows up in the button.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59db7561d8bdf",
+                        "operator": "==",
+                        "value": "show"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59bc29ccd2307",
+            "label": "Button URL",
+            "name": "button_url_fphero",
+            "type": "link",
+            "instructions": "Where do you want the button to take the user?",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59db7561d8bdf",
+                        "operator": "==",
+                        "value": "show"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1589840305
+}

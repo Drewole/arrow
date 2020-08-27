@@ -1,0 +1,117 @@
+{
+    "key": "group_59bfc8fecae37",
+    "title": "Full Width Call to Action Stripe",
+    "fields": [
+        {
+            "key": "field_5eb1cb9f850c8",
+            "label": "Add a Call to Action with Button?",
+            "name": "cta_fws_show",
+            "type": "true_false",
+            "instructions": "Adds a call to action stripe with a button. Customizable text on a per-page basis.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_59bfc914f4a9b",
+            "label": "Content",
+            "name": "cta_fws_content",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5eb1cb9f850c8",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "This is my call-to-action text",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59bfc957f4a9c",
+            "label": "Button Text",
+            "name": "cta_fws_btntxt",
+            "type": "text",
+            "instructions": "Changes the button text",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5eb1cb9f850c8",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Contact Us",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59bfc9c0f4a9d",
+            "label": "Button Link",
+            "name": "cta_fws_btnlink",
+            "type": "link",
+            "instructions": "Where do you want the user to go when the button is clicked?",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5eb1cb9f850c8",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1589956692
+}

@@ -1,0 +1,324 @@
+//////////////// HEADER STYLES
+.header {
+	position: relative;
+	z-index: 3;
+	background: $primaryColor;
+	height: 90px;
+}
+.hero-header {
+	height: 0;
+	background: none;
+}
+
+@media (min-width: 800px) {
+	.admin-bar .header {
+		margin-top: 32px;
+	}
+	.admin-bar .hero-header {
+		height: 0;
+	}
+}
+a.linked-in {
+	position: fixed;
+	left: -54px;
+	top: 40%;
+	z-index: 100;
+	@include transition(all 0.14s ease-in-out);
+
+	&:hover {
+		left: -34px;
+	}
+}
+
+.top-phone {
+	position: absolute;
+	display: none;
+	margin: 10px 0;
+
+	@media (min-width: 800px) {
+		display: inline-block;
+		top: 117px;
+		right: 110px;
+	}
+	@media (min-width: 1000px) {
+		right: 20px;
+		top: 20px;
+	}
+
+	a {
+		color: white;
+		@include font-size(18px);
+		text-shadow: 0 1px 2px rgba(0, 0, 0, .8);
+	}
+}
+
+.hero-header .top-phone {
+	top: 175px;
+	top: 116px;
+	right: 20px;
+	@media (min-width: 800px) {
+		display: inline-block;
+		top: 195px;
+	}
+}
+
+.taptap-menu-button-wrapper {
+	height: auto;
+	width: auto;
+	top: 17px;
+	padding: 5px 10px;
+	background: rgba($secondaryColor, .9);
+	border-radius: 2px;
+}
+.taptap-menu-button-wrapper.taptap-menu-active {
+	background: rgba($secondaryColor, 1);
+}
+#menu-item-174 {
+	background: $secondaryColor;
+	border-radius: 4px;
+	margin: 30px 5%;
+	max-width: 90%;
+
+	a {
+		margin: 0;
+		padding: 20px 4%;
+		color: $white;
+	}
+}
+
+.hero-header .taptap-menu-button-wrapper {
+	top: 20px;
+}
+.taptap-main-menu-button-two {
+	padding: 8px 12px;
+	border-radius: 2px;
+}
+.taptap-main-menu-button-two:before,
+.taptap-main-menu-button-two div.taptap-main-menu-button-two-middle:before,
+.taptap-main-menu-button-two:after {
+	height: 3px;
+}
+a.logo {
+	display: inline-block;
+	background-image: url(#{$images}/svg/arrowLogoTop.svg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	margin: 20px 0 20px 20px;
+	height: 55px;
+	width: 250px;
+	text-indent: 1000%;
+	white-space: nowrap;
+	overflow: hidden;
+	filter: drop-shadow(0 2px 2px rgba(darken($primaryColor, 20%), .8));
+
+	@media (min-width: 800px) {
+		float: left;
+	}
+}
+.hero-header a.logo {
+	background-position: 220px 115px;
+	background-image: none;
+	position: absolute;
+	z-index: 6;
+	background-size: 50px 50px;
+	background-repeat: no-repeat;
+	background-color: $secondaryColor;
+	width: 300px;
+	height: 190px;
+	top: 150px;
+	left: -206px;
+	filter: drop-shadow(0 2px 2px rgba(darken($primaryColor, 20%), .3));
+	transform: rotate(-45deg);
+
+	&::before {
+		content: "";
+		position: absolute;
+		background-image: url(#{$images}/svg/arrowLogoSml.svg);
+		background-size: 52px 52px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		transform: rotate(45deg);
+		z-index: 7;
+		width: 100%;
+		height: 100%;
+		top: 24%;
+		left: 33%;
+		@include transition(all 0.14s ease-in-out);
+	}
+
+	&:hover {
+		left: -185px;
+		&::before {
+			transform: rotate(180);
+		}
+	}
+	@media (min-width: 800px) {
+		top: 180px;
+	}
+
+	@include for-size(desktop-up) {
+	}
+}
+.admin-bar .hero-header a.logo {
+	top: 150px;
+	@media (min-width: 800px) {
+		top: 186px;
+	}
+}
+
+.twentyfive-years {
+	z-index: 6;
+	position: absolute;
+	top: 100px;
+	right: 10px;
+	width: 85px;
+	height: 85px;
+	filter: drop-shadow(0 2px 2px rgba(darken($gray, 20%), .8));
+}
+.hero-header .twentyfive-years {
+	top: 190px;
+	right: 100px;
+	@media (min-width: 800px) {
+		top: 270px;
+		right: 20px;
+	}
+}
+.hero {
+	margin-top: -182px;
+	position: relative;
+	padding-top: 240px;
+	border-bottom: 10px solid $primaryColor;
+	z-index: 1;
+	background-position: top center;
+	height: 45em;
+	background-size: 250%;
+	h2 {
+		font-family: $sans-serif;
+		padding: 0 4%;
+		@include font-size(32px);
+		line-height: 1em;
+		color: $gray;
+		text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.8);
+		margin-bottom: 10px;
+		@media (min-width: 600px) {
+			@include font-size(32px);
+		}
+		@media (min-width: 741px) {
+			@include font-size(32px);
+		}
+		@media (min-width: 820px) {
+			@include font-size(36px);
+		}
+		@include for-size(desktop-up) {
+			@include font-size(36px);
+		}
+	}
+	p {
+		padding: 0 4%;
+	}
+	a.btn {
+		color: white;
+		text-shadow: 0 1px 2px $primaryColor;
+		line-height: 1.6em;
+		padding-right: 2em;
+		padding-left: 2em;
+
+		&:hover {
+			color: white;
+		}
+	}
+	section {
+		background-color: white(.7);
+		padding: 20px 0 45px;
+		margin-top: 50px;
+		@media (min-width: 500px) {
+			margin-top: 80px;
+		}
+		@media (min-width: 600px) {
+			margin-top: 100px;
+		}
+
+		@media (min-width: 741px) {
+			margin-top: 140px;
+		}
+		@media only screen and (min-width: 1060px) {
+			margin-top: 30px;
+			padding-bottom: 45px;
+		}
+	}
+
+	svg.primary-logo {
+		display: block;
+		margin: 0 auto 25px;
+		max-width: 70%;
+		@include transition(all 0.14s ease-in-out);
+		@include for-size(desktop-up) {
+			max-width: 700px;
+		}
+	}
+
+	@include for-size(tablet-portrait-up) {
+		margin-top: -194px;
+		height: 48em;
+		background-size: 200%;
+	}
+	@include for-size(tablet-landscape-up) {
+		padding-top: 260px;
+		background-size: 160%;
+		height: 50em;
+	}
+	@media (min-width: 1060px) {
+		background-size: 120%;
+		padding-top: 350px;
+	}
+	@include for-size(desktop-up) {
+		background-size: 135%;
+		padding-top: 390px;
+		height: 60em;
+		h2 {
+			@include font-size(45px);
+		}
+	}
+	@media (min-width: 1400px) {
+		background-size: 115%;
+		padding-top: 400px;
+	}
+	@include for-size(big-desktop-up) {
+		padding-top: 470px;
+		background-size: 121%;
+		background-position-y: -50px;
+		height: 67em;
+	}
+	@media (min-width: 1800px) {
+		background-size: 108%;
+		padding-top: 400px;
+	}
+
+	&::after {
+		content: " ";
+		position: absolute;
+		top: 160px;
+		left: 0;
+		z-index: 2;
+		height: 220px;
+		width: 100%;
+		background: rgba(0, 0, 0, 0.48);
+		background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.48) 0%, rgba(0, 0, 0, 0) 100%);
+		background: -webkit-gradient(
+			left top,
+			left bottom,
+			color-stop(0%, rgba(0, 0, 0, 0.48)),
+			color-stop(100%, rgba(0, 0, 0, 0))
+		);
+		background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.48) 0%, rgba(0, 0, 0, 0) 100%);
+		background: -o-linear-gradient(top, rgba(0, 0, 0, 0.48) 0%, rgba(0, 0, 0, 0) 100%);
+		background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.48) 0%, rgba(0, 0, 0, 0) 100%);
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0.48) 0%, rgba(0, 0, 0, 0) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(
+				startColorstr='#000000',
+				endColorstr='#000000',
+				GradientType=0
+			);
+	}
+}
+//Fancy Sticky header

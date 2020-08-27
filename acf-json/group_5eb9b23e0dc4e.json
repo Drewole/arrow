@@ -1,0 +1,102 @@
+{
+    "key": "group_5eb9b23e0dc4e",
+    "title": "Services Section",
+    "fields": [
+        {
+            "key": "field_5eb9b2671936f",
+            "label": "Add a Services\/Products Section to this page?",
+            "name": "add_ss",
+            "type": "true_false",
+            "instructions": "Would you like to add a services section to this page?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5eb9b2c104a8c",
+            "label": "Section Title",
+            "name": "title_ss",
+            "type": "text",
+            "instructions": "This will be displayed above the services.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5eb9b2671936f",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ebd77c88de44",
+            "label": "Three Points",
+            "name": "services_threepoints",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5eb9b2671936f",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Point 1\r\nPoint 2\r\nPoint 3",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            },
+            {
+                "param": "page",
+                "operator": "!=",
+                "value": "50"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1590046086
+}

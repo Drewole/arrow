@@ -1,0 +1,65 @@
+//////////////// Large Hero with Button
+
+.hero {
+	height: 28em;
+	@include for-size(tablet-portrait-up) {
+		height: 45em;
+	}
+	position: relative;
+	background-attachment: fixed;
+	background-position: top center;
+	background-size: 300%;
+	.section {
+		max-width: 90%;
+		height: 40%;
+		display: block;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	img.hero-logo {
+		margin: 25px auto 40px;
+	}
+	h2 {
+		@include font-size(36px);
+		@include for-size(tablet-portrait-up) {
+			@include font-size(46px);
+		}
+		color: $white;
+		font-weight: 300;
+		margin: 0;
+		text-align: center;
+		text-shadow: 0 2px 3px rgba(0, 0, 0, .9);
+	}
+	p.subTitle {
+		color: $white;
+		font-weight: 600;
+		line-height: 1.3em;
+		@include font-size(16px);
+		@include for-size(tablet-portrait-up) {
+			@include font-size(20px);
+		}
+		text-shadow: 0 2px 3px rgba(0, 0, 0, .9);
+	}
+
+	p {
+		text-align: center;
+	}
+	.btn {
+		@include font-size(16px);
+		color: darken($link-color, 25%);
+		font-weight: 600;
+		line-height: .95em;
+		padding: 1.15em 1.25em;
+		text-shadow: 0 1px 1px white(.4);
+		&:hover,
+		&:visited {
+			color: darken($link-color, 25%);
+		}
+		svg {
+			float: right;
+			margin: -8px 0 -5px 8px;
+		}
+	}
+}

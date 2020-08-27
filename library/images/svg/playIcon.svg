@@ -1,0 +1,28 @@
+<svg class="play-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43" height="41" viewBox="0 0 43 41">
+  <defs>
+    <path id="play-icon-a" d="M20.5,0.429362881 C31.8218374,0.429362881 41,9.15981026 41,19.9293629 C41,30.6989155 31.8218374,39.4293629 20.5,39.4293629 C9.17816263,39.4293629 0,30.6989155 0,19.9293629 C0,9.15981026 9.17816263,0.429362881 20.5,0.429362881 Z M20.6782609,6.87284114 C12.9991016,6.87284114 6.77391304,12.794362 6.77391304,20.0989281 C6.77391304,27.4034942 12.9991016,33.3250151 20.6782609,33.3250151 C28.3574201,33.3250151 34.5826087,27.4034942 34.5826087,20.0989281 C34.5826087,12.794362 28.3574201,6.87284114 20.6782609,6.87284114 Z"/>
+    <filter id="play-icon-b" width="112.2%" height="112.8%" x="-6.1%" y="-6.4%" filterUnits="objectBoundingBox">
+      <feGaussianBlur in="SourceAlpha" result="shadowBlurInner1" stdDeviation="1.5"/>
+      <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+      <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+      <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0"/>
+    </filter>
+    <polygon id="play-icon-c" points="33 19.929 13 30.429 13 9.429"/>
+    <filter id="play-icon-d" width="127.9%" height="126.9%" x="-12.5%" y="-13.5%" filterUnits="objectBoundingBox">
+      <feGaussianBlur in="SourceAlpha" result="shadowBlurInner1" stdDeviation="1.5"/>
+      <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+      <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+      <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0"/>
+    </filter>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(1 .57)">
+    <use fill="#681420" xlink:href="#play-icon-a"/>
+    <use fill="#000" filter="url(#play-icon-b)" xlink:href="#play-icon-a"/>
+    <use stroke="#DF1E36" xlink:href="#play-icon-a"/>
+    <g>
+      <use fill="#681420" xlink:href="#play-icon-c"/>
+      <use fill="#000" filter="url(#play-icon-d)" xlink:href="#play-icon-c"/>
+      <use stroke="#DF1E36" xlink:href="#play-icon-c"/>
+    </g>
+  </g>
+</svg>

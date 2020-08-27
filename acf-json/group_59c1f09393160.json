@@ -1,0 +1,81 @@
+{
+    "key": "group_59c1f09393160",
+    "title": "Footer Locations",
+    "fields": [
+        {
+            "key": "field_5eb1845496f7b",
+            "label": "Address in the Footer",
+            "name": "footer_address",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5eb184c096f7c",
+            "label": "Name of Address",
+            "name": "footer_address_name",
+            "type": "text",
+            "instructions": "Headquarters, Ramsey, whatever you want.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5eb184e296f7d",
+            "label": "Site-wide Phone Number",
+            "name": "footer_address_phone",
+            "type": "text",
+            "instructions": "This phone number will be displayed in the footer, as well as the header above the 25-years logo.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-footer"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1588693017
+}

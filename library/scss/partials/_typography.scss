@@ -1,0 +1,115 @@
+/******************************************************************
+Stylesheet: Typography
+
+Declaring font-families or setting up font-face. Also declare variables for the typfaces. General Typography
+******************************************************************/
+
+//////////////// Font Stacks THIS MUST BE SET FIRST OTHERWISE COMPILING ERRORS WILL OCCUR
+$sans-serif: "Montserrat", sans-serif;
+$serif: "Oswald", serif;
+
+body {
+	font-family: $sans-serif;
+	font-size: 100%;
+	line-height: 1.9;
+	color: $text-color;
+	background-color: $white;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+	color: rgba(253, 0, 45, .8);
+	background-color: rgba(48, 48, 48, .2);
+}
+::-moz-selection {
+	color: rgba(253, 0, 45, .8);
+	background-color: rgba(48, 48, 48, .2);
+}
+
+//////////////// H1, H2, H3, H4, H5 STYLES
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+	text-rendering: optimizelegibility;
+	font-weight: 600;
+	/*
+	if you're going to use webfonts, be sure to check your weights
+	http://css-tricks.com/watch-your-font-weight/
+	*/
+
+	/* removing text decoration from all headline links */
+	a {
+		text-decoration: none;
+	}
+}
+
+h1,
+.h1 {
+	font-size: 3.2em;
+	line-height: 1.333em;
+}
+
+h2,
+.h2 {
+	font-size: 2.2em;
+	color: $primaryColor;
+	font-weight: 300;
+	font-family: $serif;
+	line-height: 1.4em;
+	margin-bottom: 0.375em;
+}
+
+h3,
+.h3 {
+	font-size: 1.125em;
+}
+
+h4,
+.h4 {
+	font-size: 1.1em;
+	font-weight: 700;
+	border-left: 4px solid $secondaryColor;
+	padding-left: 5px;
+}
+
+h5,
+.h5 {
+	font-size: 0.846em;
+	font-family: $serif;
+	line-height: 2.09em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+/*
+some nice typographical defaults
+more here: http://www.newnet-soft.com/blog/csstypography
+*/
+p {
+	-ms-word-wrap: break-word;
+	word-break: break-word; //non-standart css for webkit
+	word-wrap: break-word;
+	// cleaning up the ragged lines and breaks
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+	// sets a minimum number of characters before and after the break
+	-webkit-hyphenate-before: 2;
+	-webkit-hyphenate-after: 3;
+	hyphenate-lines: 3;
+	// enabling fancy ligatures when available
+	-webkit-font-feature-settings: "liga", "dlig";
+	-moz-font-feature-settings: "liga=1, dlig=1";
+	-ms-font-feature-settings: "liga", "dlig";
+	-o-font-feature-settings: "liga", "dlig";
+	font-feature-settings: "liga", "dlig";
+}

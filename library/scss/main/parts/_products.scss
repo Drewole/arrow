@@ -1,0 +1,155 @@
+.content-tabs {
+	.tabs-container {
+		min-height: 2000px;
+		background: rgb(48, 48, 48);
+		background: linear-gradient(0deg, rgba(48, 48, 48, 1) 0%, rgba(48, 48, 48, 1) 32%, rgba(255, 255, 255, 1) 80%);
+		@include for-size(tablet-landscape-up) {
+			min-height: 1300px;
+		}
+
+		@media (min-width: 1250px) {
+			min-height: 1200px;
+		}
+
+		h2 {
+			@include font-size(38px);
+			padding: 0 2% 0 4%;
+			color: $gray;
+			border-bottom: 1px solid lighten($secondaryColor, 10%);
+			display: inline-block;
+		}
+	}
+	ul.tabs {
+		li {
+			float: left;
+			display: block;
+			@include for-size(desktop-up) {
+				&:first-of-type {
+					margin-left: 4%;
+				}
+			}
+		}
+		input[type="radio"] {
+			position: absolute;
+			top: 0;
+			left: -9999px;
+		}
+		label {
+			display: inline-block;
+			background: darken($white, 6%);
+			padding: 10px 14px;
+			border-radius: 2px 2px 0 0;
+			border-right: 1px solid darken($white, 2%);
+			border-top: 1px solid darken($white, 2%);
+			border-left: 1px solid darken($white, 2%);
+			@include font-size(20px);
+			width: 100%;
+
+			@include transition(all 0.2s ease-in-out);
+			&:hover {
+				background: darken($white, 7%);
+				color: $primaryColor;
+			}
+			@include for-size(tablet-landscape-up) {
+				@include font-size(14px);
+			}
+
+			@media (min-width: 1250px) {
+				padding: 14px 21px;
+				@include font-size(20px);
+			}
+		}
+
+		.tab-content {
+			z-index: 2;
+			display: none;
+			border-top: 4px solid darken($white, 8%);
+			background-color: $gray;
+			color: $white;
+			overflow: hidden;
+			min-height: 100%;
+			width: 100%;
+			font-size: 17px;
+			position: absolute;
+			top: 362px;
+			left: 0;
+			@include for-size(tablet-landscape-up) {
+				top: 51px;
+			}
+			@media (min-width: 1250px) {
+				top: 69px;
+			}
+
+			h3 {
+				font-weight: 300;
+				@include font-size(32px);
+				line-height: 1.1em;
+			}
+			h4 {
+				text-transform: uppercase;
+				@include font-size(16px);
+				line-height: 1.1em;
+			}
+			ul {
+				line-height: 1.2em;
+			}
+		}
+
+		//The Magic
+		[id^="tab"]:checked + label {
+			background: $white;
+			border-top: 1px solid darken($white, 7%);
+			border-right: 1px solid darken($white, 7%);
+			border-left: 1px solid darken($white, 7%);
+			color: $primaryColor;
+		}
+		[id^="tab"]:checked ~ [id^="tab-content"] {
+			display: block;
+		}
+	}
+}
+body.page-id-65 {
+	.content-tabs {
+		ul.tabs {
+			.tab-content {
+				top: 362px;
+				@include for-size(tablet-landscape-up) {
+					top: 51px;
+				}
+				@media (min-width: 1250px) {
+					top: 69px;
+				}
+			}
+		}
+	}
+}
+body.page-id-63 {
+	.content-tabs {
+		ul.tabs {
+			.tab-content {
+				top: 185px;
+				@include for-size(tablet-landscape-up) {
+					top: 51px;
+				}
+				@media (min-width: 1250px) {
+					top: 69px;
+				}
+			}
+		}
+	}
+}
+body.page-id-63 {
+	.content-tabs {
+		ul.tabs {
+			.tab-content {
+				top: 185px;
+				@include for-size(tablet-landscape-up) {
+					top: 51px;
+				}
+				@media (min-width: 1250px) {
+					top: 69px;
+				}
+			}
+		}
+	}
+}

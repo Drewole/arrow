@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="14" viewBox="0 0 21 14">
+  <defs>
+    <path id="email-a" d="M18.9209451,3.21170764 C18.9373194,3.2761378 18.9458825,3.34259533 18.9458825,3.41052632 L18.9458825,10.9263158 C18.9458825,11.5192952 18.2933932,12 17.4885069,12 L1.45737557,12 C0.65248927,12 0,11.5192952 0,10.9263158 L0,3.43486572 L8.34045096,7.20520974 C8.82270348,7.42321448 9.6045893,7.42321448 10.0868418,7.20520974 L18.9209451,3.21170764 Z"/>
+    <filter id="email-b" width="126.4%" height="159.2%" x="-13.2%" y="-30.7%" filterUnits="objectBoundingBox">
+      <feGaussianBlur in="SourceAlpha" result="shadowBlurInner1" stdDeviation="1.5"/>
+      <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+      <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+      <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0"/>
+    </filter>
+    <path id="email-c" d="M18.9458825,5.01052632 L18.9458825,1.07368421 C18.9458825,0.480704795 18.2933932,0 17.4885069,0 L1.45737557,0 C0.65248927,0 0,0.480704795 0,1.07368421 L0,5.01052632 L0,1.43157895 L8.34045096,5.22626237 C8.82270348,5.44426712 9.6045893,5.44426712 10.0868418,5.22626237 L18.9458825,1.17975946 L18.9458825,5.01052632 Z"/>
+    <filter id="email-d" width="126.4%" height="192.8%" x="-13.2%" y="-46.4%" filterUnits="objectBoundingBox">
+      <feGaussianBlur in="SourceAlpha" result="shadowBlurInner1" stdDeviation="1.5"/>
+      <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+      <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+      <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0"/>
+    </filter>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+    <use fill="#681420" xlink:href="#email-a"/>
+    <use fill="#000" filter="url(#email-b)" xlink:href="#email-a"/>
+    <use stroke="#DF1E36" xlink:href="#email-a"/>
+    <g>
+      <use fill="#681420" xlink:href="#email-c"/>
+      <use fill="#000" filter="url(#email-d)" xlink:href="#email-c"/>
+      <use stroke="#DF1E36" xlink:href="#email-c"/>
+    </g>
+  </g>
+</svg>

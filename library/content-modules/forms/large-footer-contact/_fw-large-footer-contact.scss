@@ -1,0 +1,38 @@
+footer[role=footer-contact] {
+	padding: 30px 10%;
+	background-color: darken($white, 5%);
+	@include for-size(tablet-landscape-up) {
+		padding: 30px 21%;
+	}
+
+	input,
+	select,
+	textarea {
+		background-color: darken($white, 13%);
+		border-bottom: 2px darken($white, 13%) !important;
+	}
+	input.medium {
+		margin-right: none;
+		margin-right: none;
+	}
+	label {
+		color: $medium-gray;
+	}
+	h3 {
+		color: $primaryColor;
+		@include font-size(22px);
+	}
+
+	.callus {
+		color: $medium-gray;
+		text-align: center;
+		@include font-size(13px);
+		margin-top: 50px;
+		float: none;
+		@include for-size(tablet-landscape-up) {
+			float: left;
+			text-align: left;
+			margin: -24px 0 0 15px;
+		}
+	}
+}

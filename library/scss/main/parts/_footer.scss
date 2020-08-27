@@ -1,0 +1,177 @@
+//////////////// FOOTER STYLES
+
+.footer {
+	clear: both;
+	color: $light-gray;
+}
+footer[role=top-footer] {
+	min-height: 20%;
+	background-color: $primaryColor;
+	padding: 20px 0;
+	border-top: 4px solid darken($primaryColor, 5%);
+
+	@media (max-width: 819px) {
+		div {
+			padding-right: 2em;
+			padding-left: 2em;
+		}
+	}
+
+	h3 {
+		font-family: $serif;
+		@include font-size(26px);
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	ul {
+		margin-top: 35px;
+	}
+	a {
+		color: lighten($link-color, 6%);
+		&:hover {
+			color: $white;
+		}
+	}
+	li a {
+		border-bottom: 2px solid darken($primaryColor, 8%);
+		display: block;
+		color: lighten($link-color, 6%);
+		padding: 10px 0 0;
+		@include font-size(14px);
+		font-weight: 500;
+		@include transition(all 0.14s ease-in-out);
+		&:hover {
+			color: white;
+			padding-left: 5px;
+		}
+	}
+	.shop-online {
+		h3 {
+			padding-bottom: 10px;
+		}
+		img {
+			border: 4px solid darken($primaryColor, 8%);
+		}
+		a.btn {
+			margin: 2.4em;
+			padding: .738em 1.54em;
+			@include font-size(12px);
+			&:hover {
+				color: white;
+			}
+		}
+	}
+	.product {
+		width: 48%;
+		float: left;
+		padding: 10px 2% 0;
+		position: relative;
+		img {
+			width: 100%;
+			height: auto;
+			@include transition(all 0.14s ease-in-out);
+		}
+	}
+	.overlay.svg {
+		position: absolute;
+		z-index: 4;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		opacity: .45;
+		@include transition(all 0.14s ease-in-out);
+
+		&:hover {
+			opacity: 1;
+		}
+		svg {
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			top: 32%;
+			left: 50%;
+			-webkit-transform: translateX(-50%);
+			transform: translateX(-50%);
+			fill: #222;
+		}
+	}
+	.footer-location #footer_map {
+		width: 100%;
+		height: 100%;
+	}
+	.location {
+		padding-left: 0;
+		padding-right: 0;
+		p {
+			line-height: 1.2em;
+			font-weight: 500;
+		}
+
+		p.h3 {
+			margin: 45px 0 0;
+			font-family: $sans-serif;
+			text-transform: uppercase;
+			color: white;
+			@include font-size(16px);
+			font-weight: 900;
+		}
+		.directions {
+			@include font-size(12px);
+			text-transform: uppercase;
+			background-color: transparent;
+		}
+		i {
+			font-size: 25px;
+			border: 1px solid #ed4257;
+			padding: 5px 10px;
+			border-radius: 3px;
+			@include transition(all 0.14s ease-in-out);
+			&:hover {
+				color: $white;
+				background-color: darken($primaryColor, 8%);
+				border-color: darken($primaryColor, 8%);
+			}
+		}
+	}
+}
+
+footer[role=bottom-footer] {
+	background-color: $gray;
+	display: block;
+	padding: 15px 0;
+	@include font-size(13px);
+	text-transform: uppercase;
+	nav[role=navigation] {
+		@include for-size(tablet-landscape-up) {
+			float: right;
+			text-align: right;
+		}
+		a {
+			@include transition(all 0.14s ease-in-out);
+			color: white;
+			&:hover {
+				color: $link-color;
+			}
+		}
+	}
+}
+.sitecreds {
+	a {
+		@include transition(all 0.14s ease-in-out);
+		color: white;
+		&:hover {
+			color: $link-color;
+		}
+	}
+}
+
+.copyright {
+	color: white;
+	font-weight: 600;
+	text-align: center;
+	@include for-size(tablet-landscape-up) {
+		float: left;
+		text-align: left;
+	}
+}

@@ -1,0 +1,215 @@
+//////////////// Mobile Navigation is handled by the TapTap Plugin
+//////////////// This is the general navigation
+.hero-header .main-nav {
+	padding-left: 100px;
+	@media (min-width: 800px) {
+		margin: 0px 0 20px;
+		top: 256px;
+	}
+}
+.main-nav {
+	text-align: center;
+	position: relative;
+	z-index: 5;
+	background-color: $primaryColor;
+	padding-left: 0;
+	@media (min-width: 800px) {
+		margin: 0px 0 20px 10px;
+		top: 4px;
+		float: left;
+		clear: none;
+	}
+
+	.nav {
+		border: 0;
+		margin: 20px auto;
+		ul {
+			text-align: center;
+			display: inline;
+		}
+
+		li {
+			display: inline-block;
+			position: relative;
+			margin: 0;
+
+			a {
+				border-bottom: 0;
+				position: relative;
+				z-index: 8999;
+				text-transform: uppercase;
+				@include font-size(14px);
+				padding: 10px 15px;
+				display: block;
+				color: $white;
+				font-weight: 600;
+				text-decoration: none;
+				text-shadow: 0 1px 4px black(.8);
+
+				/*
+    			you can use hover styles here even though this size
+    			has the possibility of being a mobile device.
+    			*/
+			}
+			&:hover > a {
+				color: darken($secondaryColor, 30%);
+				text-shadow: 0 1px 1px rgba($white, .4);
+				background: $secondaryColor;
+				border-radius: 3px;
+			}
+
+			/*
+    		plan your menus and drop-downs wisely.
+    		*/
+			ul.sub-menu,
+			ul.children {
+				border-top: 0;
+				margin: 0;
+				position: absolute;
+				border-radius: 3px 0 3px 3px;
+				box-shadow: 0 13px 6px -6px rgba($black, .6);
+				transform: translateY(-2em);
+				transition: all 0.3s ease-in-out 0s, visibility 0.01s ease-in 0s, z-index 0s linear 0s;
+				left: 0;
+				top: -4px;
+				visibility: hidden;
+				z-index: 8998;
+				background: $secondaryColor;
+
+				li {
+					display: block;
+					a {
+						padding-left: 20px;
+						color: darken($secondaryColor, 30%);
+						text-shadow: 0 1px 1px rgba($white, .4);
+						background-image: none;
+						text-align: left;
+						border-right: 0;
+						display: block;
+						width: 385px;
+						@include font-size(14px);
+						border-bottom: 1px solid darken($secondaryColor, 30%);
+
+						&::after {
+							background: none;
+						}
+
+						&:hover,
+						&:focus {
+							background: darken($secondaryColor, 6%);
+							color: white;
+							text-shadow: 0 1px 1px rgba($black, .3);
+						}
+
+						&:link {
+						}
+					}
+
+					&:first-child {
+					}
+
+					&:last-child {
+						a {
+							border-bottom: 0;
+						}
+					}
+
+					/*
+    				if you need to go deeper, go nuts
+    				just remember deeper menus suck
+    				for usability. k, bai.
+    				*/
+					ul {
+						top: 0;
+						left: 100%;
+					}
+				}
+
+				/* highlight sub-menu current page */
+				li.current-menu-item,
+				li.current_page_item,
+				li.current_page_ancestor {
+					a {
+					}
+				}
+			}
+
+			&:hover ul.sub-menu {
+				transform: translateY(0%);
+				transition-delay: 0s, 0s, 0.3s;
+			}
+
+			/* showing sub-menus */
+			&:hover > ul {
+				top: auto;
+				visibility: visible;
+			}
+		} /* end .menu ul li */
+
+		li.menu-item-has-children > a {
+			padding-right: 30px;
+			background-image: url(#{$images}dropdownTriangleShadow.png);
+			background-position: 95% center;
+			background-repeat: no-repeat;
+			&:hover {
+				border-radius: 3px 3px 0 0;
+			}
+		}
+		li.menu-item-has-children a ul.children li a {
+			background-image: none !important;
+			padding-right: 15px;
+		}
+
+		/* highlight current page */
+		li.current-menu-item,
+		li.current_page_item,
+		li.current_page_ancestor {
+			a {
+			}
+		} /* end current highlighters */
+	} /* end .nav */
+
+	&::after {
+		content: "";
+		transform: rotate(225deg);
+		position: absolute;
+		top: -39px;
+		right: -52px;
+		display: block;
+		width: 0;
+		height: 0;
+		border-top: 61px solid transparent;
+		border-bottom: 61px solid transparent;
+		border-left: 61px solid $primaryColor;
+	}
+}
+
+.footer-nav {
+	text-align: center;
+	ul {
+		text-align: center;
+	}
+
+	li {
+		display: inline-block;
+		position: relative;
+
+		a {
+			border-bottom: 0;
+
+			padding: 10px 15px;
+			color: darken($secondaryColor, 25%);
+			font-weight: 600;
+			text-decoration: none;
+
+			/*
+			you can use hover styles here even though this size
+			has the possibility of being a mobile device.
+			*/
+			&:hover,
+			&:focus {
+				color: $white;
+			}
+		}
+	} /* end .menu ul li */
+} /* end .nav */

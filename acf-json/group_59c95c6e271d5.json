@@ -1,0 +1,53 @@
+{
+    "key": "group_59c95c6e271d5",
+    "title": "Dynamic Sidebars Select",
+    "fields": [
+        {
+            "key": "field_59c95c75fb6aa",
+            "label": "Select a Sidebar",
+            "name": "ds_select_sidebar",
+            "type": "select",
+            "instructions": "Create a new sidebar under Theme Settings. Then populate the sidebars under Appearance > Widgets. Finally, select the sidebar you wish to display.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": [],
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "modified": 1589996794
+}

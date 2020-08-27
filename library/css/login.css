@@ -1,0 +1,336 @@
+@charset "UTF-8";
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Login Stylesheet
+
+This stylesheet is loaded (if admin.php is setup in your
+functions file) on the login page. This way you can style
+the login page. It won't affect any other page, admin or front-end.
+
+For more info, check out the codex:
+http://codex.wordpress.org/Creating_Admin_Themes
+
+******************************************************************/
+/******************************************************************
+Stylesheet: Variables
+
+Here is where we declare all our variables like colors, fonts,
+base values, and defaults. We want to make sure this file ONLY
+contains variables that way our files don't get all messy.
+No one likes a mess.
+
+******************************************************************/
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
+/******************************************************************
+Stylesheet: Mixins Stylesheet
+
+This is where you can take advantage of Sass' great features: Mixins.
+I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques gradients.
+******************************************************************/
+/***************************************************
+￼Quick list of how to use the included mixins
+
+@include transition($transition);
+@extend %clearfix;
+@include font-size(14px)
+@include image-2x("logo2x.png", 100px, 25px);
+@include css-gradient($color1,$color2);
+@include box-sizing(border-box);
+
+//Media Queries
+@include for-size(phone-only)
+@include for-size(tablet-portrait-up)
+@include for-size(tablet-landscape-up)
+@include for-size(desktop-up)
+@include for-size(big-desktop-up)
+
+****************************************************/
+/***************************************************
+￼Easy to remember media query sizes
+****************************************************/
+/*
+usage
+.my-box {
+  padding: 10px;
+
+  @include for-size(desktop-up) {
+    padding: 20px;
+  }
+}
+*/
+/***************************************************
+￼Lighten or Darken a Color Easily
+****************************************************/
+/* Use
+a {
+	&:hover {
+		color: darker($red);
+	}
+}
+*/
+/*********************
+TRANSITION
+*********************/
+/*
+I totally rewrote this to be cleaner and easier to use.
+You'll need to be using Sass 3.2+ for these to work.
+Thanks to @anthonyshort for the inspiration on these.
+USAGE: @include transition(all 0.2s ease-in-out);
+*/
+/*********************
+Clearfix
+*********************/
+/*
+Usage:
+.container-with-floated-children {
+  @extend %clearfix;
+}
+*/
+/*********************
+Define default font-size with REM automatically added.
+*********************/
+/*
+Usage:
+p {
+  @include font-size(14px)
+}
+*/
+/*
+Usage:
+div.logo {
+  background: url("logo.png") no-repeat;
+  @include image-2x("logo2x.png", 100px, 25px);
+}
+*/
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdo it.
+*********************/
+/*
+Usage:
+@include css-gradient(#dfdfdf,#f8f8f8);
+*/
+/*********************
+BOX SIZING
+*********************/
+/*
+Usage:
+@include box-sizing(border-box);
+*/
+/***************************************************
+￼Generate Pure CSS Arrows
+****************************************************/
+/* -------------------Use￼------------------- */
+/*&:before {
+			@include arrow (right, 3px, black);
+		}
+*/
+/******************************************************************
+Stylesheet: Typography
+
+Declaring font-families or setting up font-face. Also declare variables for the typfaces. General Typography
+******************************************************************/
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 100%;
+  line-height: 1.9;
+  color: #505050;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+::selection {
+  color: rgba(253, 0, 45, 0.8);
+  background-color: rgba(48, 48, 48, 0.2); }
+
+::-moz-selection {
+  color: rgba(253, 0, 45, 0.8);
+  background-color: rgba(48, 48, 48, 0.2); }
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+  text-rendering: optimizelegibility;
+  font-weight: 600;
+  /*
+	if you're going to use webfonts, be sure to check your weights
+	http://css-tricks.com/watch-your-font-weight/
+	*/
+  /* removing text decoration from all headline links */ }
+  h1 a,
+  .h1 a,
+  h2 a,
+  .h2 a,
+  h3 a,
+  .h3 a,
+  h4 a,
+  .h4 a,
+  h5 a,
+  .h5 a {
+    text-decoration: none; }
+
+h1,
+.h1 {
+  font-size: 3.2em;
+  line-height: 1.333em; }
+
+h2,
+.h2 {
+  font-size: 2.2em;
+  color: #8c2332;
+  font-weight: 300;
+  font-family: "Oswald", serif;
+  line-height: 1.4em;
+  margin-bottom: 0.375em; }
+
+h3,
+.h3 {
+  font-size: 1.125em; }
+
+h4,
+.h4 {
+  font-size: 1.1em;
+  font-weight: 700;
+  border-left: 4px solid #ea263e;
+  padding-left: 5px; }
+
+h5,
+.h5 {
+  font-size: 0.846em;
+  font-family: "Oswald", serif;
+  line-height: 2.09em;
+  text-transform: uppercase;
+  letter-spacing: 2px; }
+
+/*
+some nice typographical defaults
+more here: http://www.newnet-soft.com/blog/csstypography
+*/
+p {
+  -ms-word-wrap: break-word;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  -webkit-hyphenate-before: 2;
+  -webkit-hyphenate-after: 3;
+  hyphenate-lines: 3;
+  -webkit-font-feature-settings: "liga", "dlig";
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig"; }
+
+body.login {
+  font-family: "Montserrat", sans-serif; }
+
+/* the form box */
+/*
+This is the Wordpress logo in the admin area.
+You'll have to load your own images and mess
+with the width and height.
+*/
+body.login {
+  background-color: #ea263e;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 100 100'%3E%3Crect x='0' y='0' width='96' height='96' fill-opacity='0.7' fill='%23ed4257'/%3E%3C/svg%3E"); }
+
+.login h1 a {
+  background: url(../images/svg/arrowLogoWhite.svg) no-repeat top center;
+  /* make sure to replace this! */
+  filter: drop-shadow(0 2px 2px rgba(58, 15, 21, 0.8));
+  background-size: 320px 82px;
+  width: 320px;
+  height: 82px;
+  text-indent: -9999px;
+  overflow: hidden;
+  padding-bottom: 15px;
+  display: block; }
+
+.login #backtoblog a,
+.login #nav a {
+  color: #fff;
+  font-weight: 600; }
+  .login #backtoblog a:hover,
+  .login #nav a:hover {
+    color: #ea263e; }
+
+.login #wp-auth-check-wrap #wp-auth-check {
+  background-color: #8c2332;
+  border-radius: 4px; }
+
+.login #login_error,
+.login .message {
+  border-left: 4px solid #ea263e; }
+
+.login form .input {
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid rgba(50, 57, 68, 0.2); }
+
+.login #loginform {
+  margin-left: 1px;
+  padding: 26px 24px 46px;
+  border-radius: 3px;
+  box-shadow: 0 13px 6px -6px rgba(50, 57, 68, 0.1); }
+
+body.login #wp-submit {
+  background-color: #ea263e;
+  background-color: #e1162f;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e91d36), to(#e1162f));
+  background-image: -webkit-linear-gradient(top, #e91d36, #e1162f);
+  background-image: -moz-linear-gradient(top, #e91d36, #e1162f);
+  background-image: -o-linear-gradient(top, #e91d36, #e1162f);
+  background-image: linear-gradient(to bottom, #e91d36, #e1162f);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  margin: 1rem;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 4px 4px -0.2em rgba(0, 0, 0, 0.7);
+  color: #840d1b;
+  font-weight: 600;
+  line-height: 0;
+  padding: 1.4em 1.9em;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer; }
+  body.login #wp-submit:visited {
+    color: #fff; }
+  body.login #wp-submit:hover {
+    background-color: #dc152e;
+    background-color: #e91d36;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#e1162f), to(#e91d36));
+    background-image: -webkit-linear-gradient(top, #e1162f, #e91d36);
+    background-image: -moz-linear-gradient(top, #e1162f, #e91d36);
+    background-image: -o-linear-gradient(top, #e1162f, #e91d36);
+    background-image: linear-gradient(to bottom, #e1162f, #e91d36);
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); }
+  body.login #wp-submit:active {
+    box-shadow: 0 0.063em #f2f2f2, inset 0 0 1.094em #3e060d, inset 0 0.063em #9b0f20, inset 0 -0.188em #9b0f20; }
+
+/*
+You'll have to override some of the default styles
+but since we're referencing the id, it should be easy.
+*/
+/* login button*/
