@@ -222,10 +222,7 @@ wp_reset_postdata();?>
             });
         }
     </script>
-    <!-- ￼<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsmduYsYGfN2LrdJCGMbcTBR72OLZCjdI&callback=initMap"
-    async defer></script> -->
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsmduYsYGfN2LrdJCGMbcTBR72OLZCjdI&callback=initMap"></script> -->
-    <?php //End of google maps code and script ?>
+
 
 
 	</body>
