@@ -121,7 +121,7 @@ wp_reset_postdata();?>
         //google maps
         function initMap() {
             // The location of Arrow
-            var arrowLocation = {lat: 45.221090,lng: -93.424540 };
+            var arrowLocation = {lat: 45.335580,lng: -93.719820 };
 
             // The map, centered at Arrow
             var map = new google.maps.Map(
